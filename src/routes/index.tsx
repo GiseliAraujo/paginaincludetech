@@ -301,7 +301,7 @@ function Index() {
 
       {/* WHATSAPP FLOAT */}
       <a
-        href="https://wa.me/5567992066021"
+        href="https://web.whatsapp.com/send?phone=5567992066021"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 pl-4 pr-5 py-3 rounded-full shadow-lg backdrop-blur-md bg-[#25D366]/90 text-white hover:bg-[#25D366] transition-all hover:scale-105 animate-fade-in"
