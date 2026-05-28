@@ -65,6 +65,13 @@ function Logo({ className = "" }: { className?: string }) {
 }
 
 function Index() {
+  const whatsappUrl = "https://wa.me/5567992066021?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.";
+
+  const handleWhatsAppClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
@@ -301,9 +308,10 @@ function Index() {
 
       {/* WHATSAPP FLOAT */}
       <a
-        href="https://api.whatsapp.com/send?phone=5567992066021&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar."
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleWhatsAppClick}
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 pl-4 pr-5 py-3 rounded-full shadow-lg backdrop-blur-md bg-[#25D366]/90 text-white hover:bg-[#25D366] transition-all hover:scale-105 animate-fade-in"
         aria-label="Fale no WhatsApp"
       >
