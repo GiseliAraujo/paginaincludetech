@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { MouseEvent } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,7 +68,7 @@ function Logo({ className = "" }: { className?: string }) {
 function Index() {
   const whatsappUrl = "https://wa.me/5567992066021?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.";
 
-  const handleWhatsAppClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleWhatsAppClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
