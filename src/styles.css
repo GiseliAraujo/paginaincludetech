@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -63,25 +64,36 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.985 0.005 90);
+  --foreground: oklch(0.18 0.02 280);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.18 0.02 280);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.48 0.22 295);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: oklch(0.5 0.03 280);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.9 0.01 280);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
+  --violet: oklch(0.48 0.22 295);
+  --sun: oklch(0.85 0.18 80);
+  --coral: oklch(0.74 0.18 25);
+  --teal: oklch(0.72 0.13 195);
+  --lilac: oklch(0.86 0.08 295);
+  --mist: oklch(0.97 0.01 295);
+  --grid-line: oklch(0.9 0.01 280 / 0.55);
+  --grad-a: linear-gradient(135deg, oklch(0.55 0.22 295), oklch(0.78 0.16 25));
+  --grad-b: linear-gradient(135deg, oklch(0.72 0.13 195), oklch(0.48 0.22 295));
+  --grad-c: linear-gradient(135deg, oklch(0.85 0.18 80), oklch(0.74 0.18 25));
+  --grad-hero: radial-gradient(60% 80% at 20% 20%, oklch(0.86 0.08 295 / 0.55), transparent 60%), radial-gradient(50% 70% at 80% 30%, oklch(0.85 0.18 80 / 0.35), transparent 60%), radial-gradient(60% 70% at 50% 90%, oklch(0.72 0.13 195 / 0.35), transparent 60%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +152,32 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
+}
+
+@layer utilities {
+  .font-serif-display { font-family: "Instrument Serif", "Cormorant Garamond", serif; font-weight: 400; letter-spacing: -0.015em; }
+  .font-mono-ui { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  .grad-a { background: var(--grad-a); }
+  .grad-b { background: var(--grad-b); }
+  .grad-c { background: var(--grad-c); }
+  .grad-hero { background: var(--grad-hero); }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .text-balance { text-wrap: balance; }
+  .marquee { display: inline-flex; animation: marquee 38s linear infinite; }
+  @keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+  .float-slow { animation: floaty 14s ease-in-out infinite; }
+  .float-slower { animation: floaty 22s ease-in-out infinite reverse; }
+  @keyframes floaty { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(30px,-40px) scale(1.05);} }
+  .rise { animation: rise 0.9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform: translateY(28px);} to { opacity:1; transform: translateY(0);} }
+  .pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%,100% { opacity:1; transform: scale(1);} 50% { opacity:.35; transform: scale(.7);} }
 }
