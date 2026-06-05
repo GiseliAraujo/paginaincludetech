@@ -17,7 +17,6 @@ const NAV = [
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Serviços" },
   { href: "#produtos", label: "Produtos" },
-  { href: "#eventos", label: "Eventos" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -49,14 +48,6 @@ const EXPERTISE = [
   { n: "04", t: "E-commerce & Varejo", d: "Performance, dados e experiência do usuário para impulsionar o negócio." },
 ];
 
-const EVENTS = [
-  { year: "2025", name: "SENAI + Google · IA Generativa na Educação", role: "Execução técnica nacional", place: "Brasil" },
-  { year: "2024", name: "MIT · Programa Executivo em IA", role: "Participação executiva", place: "Cambridge, EUA" },
-  { year: "2024", name: "Insper · AI for Business", role: "Painel sobre Agentes de IA", place: "São Paulo" },
-  { year: "2023", name: "Web Summit Rio", role: "Mesa de IA Generativa na Indústria", place: "Rio de Janeiro" },
-  { year: "2023", name: "Meetup Mulheres em IA · DF", role: "Keynote — LLMs aplicadas", place: "Brasília" },
-];
-
 function Logo({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`} aria-label="Include Tech">
@@ -74,7 +65,7 @@ function Logo({ className = "" }: { className?: string }) {
 }
 
 function Index() {
-  const whatsappUrl = "https://wa.me/5567992066021?text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.";
+  const whatsappUrl = "https://web.whatsapp.com/send?phone=5567992066021&text=Ol%C3%A1!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.";
 
   const handleWhatsAppClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -131,8 +122,8 @@ function Index() {
                style={{ background: "var(--violet)" }}>
               Ver serviços
             </a>
-            <a href="#eventos" className="px-6 py-3 rounded-full font-medium text-sm border border-border bg-card/60 backdrop-blur hover:border-foreground/40 transition-colors">
-              Palestras & eventos
+            <a href="#contato" className="px-6 py-3 rounded-full font-medium text-sm border border-border bg-card/60 backdrop-blur hover:border-foreground/40 transition-colors">
+              Fale conosco
             </a>
           </div>
         </div>
@@ -216,6 +207,20 @@ function Index() {
               </article>
             ))}
           </div>
+
+          <div className="mt-20">
+            <SectionLabel>Setores onde atuamos</SectionLabel>
+            <SectionTitle>Onde geramos <em className="italic" style={{ color: "var(--violet)" }}>impacto real</em>.</SectionTitle>
+            <div className="grid md:grid-cols-2 mt-10 rounded-2xl border border-border overflow-hidden bg-card">
+              {EXPERTISE.map((e, i) => (
+                <div key={e.n} className={`p-8 ${i % 2 === 0 ? "md:border-r border-border" : ""} ${i < EXPERTISE.length - 2 ? "border-b border-border" : ""}`}>
+                  <div className="font-serif-display text-sm" style={{ color: "var(--violet)" }}>{e.n}</div>
+                  <div className="font-serif-display text-2xl mt-2">{e.t}</div>
+                  <p className="mt-3 text-sm text-muted-foreground leading-[1.75]">{e.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -247,66 +252,17 @@ function Index() {
         </div>
       </section>
 
-      {/* EXPERTISE */}
-      <section className="border-y border-border" style={{ background: "var(--mist)" }}>
-        <div className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-          <SectionLabel>Setores</SectionLabel>
-          <SectionTitle>Onde geramos <em className="italic" style={{ color: "var(--violet)" }}>impacto real</em>.</SectionTitle>
-          <div className="grid md:grid-cols-2 mt-14 rounded-2xl border border-border overflow-hidden bg-card">
-            {EXPERTISE.map((e, i) => (
-              <div key={e.n} className={`p-8 ${i % 2 === 0 ? "md:border-r border-border" : ""} ${i < EXPERTISE.length - 2 ? "border-b border-border" : ""}`}>
-                <div className="font-serif-display text-sm" style={{ color: "var(--violet)" }}>{e.n}</div>
-                <div className="font-serif-display text-2xl mt-2">{e.t}</div>
-                <p className="mt-3 text-sm text-muted-foreground leading-[1.75]">{e.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* EVENTOS */}
-      <section id="eventos" className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-        <SectionLabel>Palestras & participações</SectionLabel>
-        <SectionTitle>
-          Conhecimento que move <em className="italic" style={{ color: "var(--coral)" }}>a conversa</em>.
-        </SectionTitle>
-        <ol className="mt-14 divide-y divide-border border-y border-border">
-          {EVENTS.map((e) => (
-            <li key={e.name} className="grid grid-cols-12 gap-4 py-6 items-baseline group hover:bg-card/50 transition-colors px-2 md:px-4 -mx-2 md:-mx-4 rounded-md">
-              <div className="col-span-3 md:col-span-2 font-mono-ui text-sm text-muted-foreground">{e.year}</div>
-              <div className="col-span-9 md:col-span-6 font-serif-display text-2xl">{e.name}</div>
-              <div className="col-span-12 md:col-span-3 text-sm text-muted-foreground">{e.role}</div>
-              <div className="col-span-12 md:col-span-1 text-xs font-mono-ui uppercase tracking-wider text-right" style={{ color: "var(--violet)" }}>{e.place}</div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
       {/* CONTATO */}
       <section id="contato" className="relative overflow-hidden border-t border-border">
         <div className="absolute inset-0 grad-hero opacity-70 pointer-events-none" />
         <div className="relative max-w-[900px] mx-auto px-6 md:px-10 py-28 text-center">
-          <SectionLabel center>Vamos conversar</SectionLabel>
+          <SectionLabel center>Contato</SectionLabel>
           <h2 className="font-serif-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] text-balance mt-4">
             Tem um <em className="italic" style={{ color: "var(--violet)" }}>desafio</em> que vale a pena resolver?
           </h2>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto">
             Conta pra gente. Da primeira conversa à entrega final, caminhamos com você.
           </p>
-
-          <div className="mt-10 grid sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto">
-            {[
-              ["Localização", "Brasília, DF — Brasil"],
-              ["WhatsApp", "(67) 99206-6021"],
-              ["E-mail", "giselialmeida@outlook.com"],
-              ["LinkedIn", "/in/giselialmeidadearaujo"],
-            ].map(([l, v]) => (
-              <div key={l} className="p-5 rounded-2xl border border-border bg-card/80 backdrop-blur">
-                <div className="font-mono-ui text-[10px] uppercase tracking-[0.18em]" style={{ color: "var(--violet)" }}>{l}</div>
-                <div className="mt-1 text-sm">{v}</div>
-              </div>
-            ))}
-          </div>
 
           <a href="mailto:giselialmeida@outlook.com"
              className="inline-block mt-10 px-8 py-4 rounded-full text-primary-foreground font-medium text-sm transition-transform hover:-translate-y-0.5"
@@ -333,14 +289,35 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border">
-        <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-8 flex flex-wrap items-center justify-between gap-4">
-          <Logo className="text-lg" />
-          <p className="text-xs text-muted-foreground">© 2015–2026 Include Tech. Todos os direitos reservados.</p>
-          <ul className="flex gap-5">
-            {NAV.map((n) => (
-              <li key={n.href}><a href={n.href} className="text-xs text-muted-foreground hover:text-foreground">{n.label}</a></li>
-            ))}
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-10 grid gap-6 md:grid-cols-3 md:items-center">
+          <div className="flex flex-col gap-2">
+            <Logo className="text-lg" />
+            <p className="text-xs text-muted-foreground">Brasília, DF — Brasil</p>
+            <a href={whatsappUrl} onClick={handleWhatsAppClick} className="text-xs text-muted-foreground hover:text-foreground">
+              (67) 99206-6021
+            </a>
+          </div>
+          <ul className="flex gap-4 md:justify-center">
+            <li>
+              <a href="https://instagram.com/includetech" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                 className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/includetech" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                 className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/giselialmeidadearaujo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                 className="w-9 h-9 inline-flex items-center justify-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
           </ul>
+          <p className="text-xs text-muted-foreground md:text-right">© 2015–2026 Include Tech. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
