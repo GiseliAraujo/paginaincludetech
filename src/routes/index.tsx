@@ -122,8 +122,8 @@ function Index() {
           </h1>
 
           <p className="rise mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Sou <strong className="text-foreground font-medium">Giseli Araujo</strong>. Há mais de 20 anos
-            transformo dados, IA e produto em soluções com impacto real para indústria, saúde e educação.
+            Há <strong className="text-foreground font-medium">11 anos</strong> a Include Tech
+            transforma dados, IA e produto em soluções com impacto real para indústria, saúde e educação.
           </p>
 
           <div className="rise mt-10 flex flex-wrap gap-3">
