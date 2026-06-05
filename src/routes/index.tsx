@@ -1,52 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { MouseEvent } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { useEffect, useState, type MouseEvent } from "react";
+import {
+  DEFAULT_LOCALE,
+  LOCALES,
+  LOCALE_LABELS,
+  isLocale,
+  t as translate,
+  type Locale,
+} from "../lib/i18n";
+import { detectLocale, setLocale as persistLocale } from "../lib/i18n.functions";
 
 export const Route = createFileRoute("/")({
+  loader: async () => ({ locale: await detectLocale() }),
   head: () => ({
     meta: [
-      { title: "Include Tech — IA, Dados & Produto, do desenho à entrega" },
-      { name: "description", content: "Estúdio de IA generativa, dados e produto digital. Desenvolvimento end-to-end, do desenho à entrega, com palestras e participações em eventos." },
-      { property: "og:title", content: "Include Tech — IA, Dados & Produto" },
-      { property: "og:description", content: "Do desenho à entrega: IA generativa, agentes, dados e produto digital com impacto real." },
+      { title: "Include Tech — AI, Data & Product, from design to delivery" },
+      { name: "description", content: "AI, generative AI, data and digital product studio. End-to-end development, from design to delivery." },
+      { property: "og:title", content: "Include Tech — AI, Data & Product" },
+      { property: "og:description", content: "From design to delivery: generative AI, agents, data and digital product with real impact." },
     ],
   }),
   component: Index,
 });
-
-const NAV = [
-  { href: "#sobre", label: "Sobre" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#produtos", label: "Produtos" },
-  { href: "#contato", label: "Contato" },
-];
-
-const MARQUEE = [
-  "IA Generativa", "Orquestração de Agentes", "Engenharia de Dados", "LLMs",
-  "Produto Digital", "SENAI · Google", "Indústria Brasileira", "Brasília · DF",
-  "Farmácia · Saúde", "E-commerce", "Inovação em IA", "Data Analytics",
-];
-
-const SERVICES = [
-  { k: "01", t: "Discovery & Estratégia", d: "Mapeamento de problema, oportunidade e jornada. Definimos o produto antes de uma linha de código." },
-  { k: "02", t: "Design de Produto", d: "Arquitetura de informação, fluxos e interface. Protótipos navegáveis para validar com gente real." },
-  { k: "03", t: "Engenharia de Software", d: "Frontend, backend, APIs e integrações. Stack moderna, código sustentável e entregas iterativas." },
-  { k: "04", t: "Arquitetura de Agentes de IA", d: "Pipelines com LLMs, orquestração, RAG, avaliação e governança responsável." },
-  { k: "05", t: "Engenharia de Dados", d: "Pipelines, modelagem dimensional, analytics e data storytelling para decisões baseadas em evidência." },
-  { k: "06", t: "Entrega & Operação", d: "Deploy, observabilidade, métricas de produto e evolução contínua junto ao seu time." },
-];
-
-const PRODUCTS = [
-  { tag: "Farmacêutico · IA", name: "Azuen", desc: "Plataforma de IA para o setor farmacêutico. Agentes com foco em segurança, confiabilidade e conformidade regulatória.", grad: "grad-a" },
-  { tag: "Em desenvolvimento", name: "Ibelo", desc: "Nova solução digital aplicando recursos avançados de dados e IA generativa para impacto real.", grad: "grad-b" },
-  { tag: "Saúde · IA", name: "Care", desc: "IA voltada à saúde, com foco em experiência do usuário, segurança e impacto no cuidado ao paciente.", grad: "grad-c" },
-];
-
-const EXPERTISE = [
-  { n: "01", t: "Indústria & Manufatura", d: "IA aplicada à otimização de processos, em parceria com SENAI em escala nacional." },
-  { n: "02", t: "Educação Profissional", d: "Ferramentas generativas que transformam a experiência de docentes e aprendizes." },
-  { n: "03", t: "Saúde & Farmácia", d: "Soluções de IA com rigor regulatório e foco no profissional e no paciente." },
-  { n: "04", t: "E-commerce & Varejo", d: "Performance, dados e experiência do usuário para impulsionar o negócio." },
-];
 
 function Logo({ className = "" }: { className?: string }) {
   return (
