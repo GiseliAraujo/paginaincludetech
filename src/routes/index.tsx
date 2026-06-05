@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Include Tech — IA, Dados & Produto, do desenho à entrega" },
-      { name: "description", content: "Estúdio de IA generativa, dados e produto digital liderado por Giseli Araujo. Desenvolvimento end-to-end, do desenho à entrega, com palestras e participações em eventos." },
+      { name: "description", content: "Estúdio de IA generativa, dados e produto digital. Desenvolvimento end-to-end, do desenho à entrega, com palestras e participações em eventos." },
       { property: "og:title", content: "Include Tech — IA, Dados & Produto" },
       { property: "og:description", content: "Do desenho à entrega: IA generativa, agentes, dados e produto digital com impacto real." },
     ],
