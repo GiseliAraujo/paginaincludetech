@@ -291,7 +291,7 @@ function Index() {
             Tem um <em className="italic" style={{ color: "var(--violet)" }}>desafio</em> que vale a pena resolver?
           </h2>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto">
-            Conta pra mim. Da primeira conversa à entrega final, caminho com você.
+            Conta pra gente. Da primeira conversa à entrega final, caminhamos com você.
           </p>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto">
