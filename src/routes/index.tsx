@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Include Tech — IA, Dados & Produto, do desenho à entrega" },
-      { name: "description", content: "Estúdio de IA generativa, dados e produto digital liderado por Giseli Araujo. Desenvolvimento end-to-end, do desenho à entrega, com palestras e participações em eventos." },
+      { name: "description", content: "Estúdio de IA generativa, dados e produto digital. Desenvolvimento end-to-end, do desenho à entrega, com palestras e participações em eventos." },
       { property: "og:title", content: "Include Tech — IA, Dados & Produto" },
       { property: "og:description", content: "Do desenho à entrega: IA generativa, agentes, dados e produto digital com impacto real." },
     ],
@@ -50,8 +50,8 @@ const EXPERTISE = [
 ];
 
 const EVENTS = [
-  { year: "2025", name: "SENAI + Google · IA Generativa na Educação", role: "Líder técnica de projeto nacional", place: "Brasil" },
-  { year: "2024", name: "MIT · Programa Executivo em IA", role: "Participante / Speaker convidada", place: "Cambridge, EUA" },
+  { year: "2025", name: "SENAI + Google · IA Generativa na Educação", role: "Execução técnica nacional", place: "Brasil" },
+  { year: "2024", name: "MIT · Programa Executivo em IA", role: "Participação executiva", place: "Cambridge, EUA" },
   { year: "2024", name: "Insper · AI for Business", role: "Painel sobre Agentes de IA", place: "São Paulo" },
   { year: "2023", name: "Web Summit Rio", role: "Mesa de IA Generativa na Indústria", place: "Rio de Janeiro" },
   { year: "2023", name: "Meetup Mulheres em IA · DF", role: "Keynote — LLMs aplicadas", place: "Brasília" },
@@ -96,7 +96,7 @@ function Index() {
             <li>
               <a href="#contato" className="text-sm font-medium px-4 py-2 rounded-full text-primary-foreground"
                  style={{ background: "var(--violet)" }}>
-                Fale comigo
+                Fale conosco
               </a>
             </li>
           </ul>
@@ -122,8 +122,8 @@ function Index() {
           </h1>
 
           <p className="rise mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Sou <strong className="text-foreground font-medium">Giseli Araujo</strong>. Há mais de 20 anos
-            transformo dados, IA e produto em soluções com impacto real para indústria, saúde e educação.
+            Há <strong className="text-foreground font-medium">11 anos</strong> a Include Tech
+            transforma dados, IA e produto em soluções com impacto real para indústria, saúde e educação.
           </p>
 
           <div className="rise mt-10 flex flex-wrap gap-3">
@@ -154,7 +154,7 @@ function Index() {
       <section className="max-w-[1120px] mx-auto px-6 md:px-10 py-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden mt-12">
         {[
           ["11+", "Anos como Include Tech"],
-          ["20+", "Anos em tecnologia"],
+          ["20+", "Anos de expertise em tecnologia"],
           ["3", "Produtos de IA em desenvolvimento"],
           ["∞", "Possibilidades com IA generativa"],
         ].map(([n, l]) => (
@@ -167,29 +167,30 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-        <SectionLabel>Quem sou</SectionLabel>
+        <SectionLabel>Quem somos</SectionLabel>
         <SectionTitle>
           Tecnologia com <em className="italic" style={{ color: "var(--violet)" }}>propósito</em> e profundidade.
         </SectionTitle>
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 mt-14">
           <div className="space-y-5 text-muted-foreground leading-[1.85]">
             <p>A <strong className="text-foreground font-medium">Include Tech</strong> nasceu em 2015 como casa de desenvolvimento de software e evoluiu de forma consistente para dados, analytics e Inteligência Artificial — acompanhando cada onda da transformação digital.</p>
-            <p>Hoje lidero projetos de <strong className="text-foreground font-medium">IA generativa e orquestração de agentes</strong> para indústria e educação profissional, com atuação em convênios nacionais de grande impacto — como o projeto SENAI + Google.</p>
-            <p>Minha filosofia é simples: <strong className="text-foreground font-medium">transformar IA em soluções reais, acessíveis e aplicáveis</strong>, gerando valor mensurável para quem importa.</p>
+            <p>Hoje lideramos projetos de <strong className="text-foreground font-medium">IA generativa e orquestração de agentes</strong> para indústria e educação profissional, com atuação em convênios nacionais de grande impacto — como o projeto SENAI + Google.</p>
+            <p>Nossa filosofia é simples: <strong className="text-foreground font-medium">transformar IA em soluções reais, acessíveis e aplicáveis</strong>, gerando valor mensurável para quem importa.</p>
           </div>
           <div className="relative rounded-3xl border border-border bg-card p-8 overflow-hidden">
             <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full grad-a opacity-30 blur-2xl float-slow" />
             <div className="relative">
-              <div className="font-serif-display text-3xl">Giseli Araujo</div>
+              <div className="font-serif-display text-3xl">Include Tech</div>
               <div className="mt-1 font-mono-ui text-[11px] uppercase tracking-[0.18em]" style={{ color: "var(--violet)" }}>
-                Founder · Head of AI
+                IA · Dados · Produto
               </div>
               <p className="mt-5 text-sm text-muted-foreground leading-[1.8]">
-                Tech, Data & AI Lead com mais de 20 anos de experiência. Especialista em IA Generativa,
-                LLMs e Orquestração de Agentes. Conecto IA à indústria brasileira, educação profissional e saúde.
+                Estúdio especializado em IA Generativa, LLMs e Orquestração de Agentes.
+                Conectamos inteligência artificial à indústria brasileira, educação profissional e saúde
+                com soluções end-to-end, do desenho à entrega.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
-                {["IA Generativa","LLMs","Agentes de IA","Product Management","Data & Analytics","MIT · Insper"].map((t) => (
+                {["IA Generativa","LLMs","Agentes de IA","Product Management","Data & Analytics","Indústria · Saúde · Educação"].map((t) => (
                   <span key={t} className="text-xs px-3 py-1 rounded-full border border-border bg-background/60"
                         style={{ color: "var(--violet)" }}>{t}</span>
                 ))}
@@ -202,7 +203,7 @@ function Index() {
       {/* SERVIÇOS */}
       <section id="servicos" className="relative border-y border-border" style={{ background: "var(--mist)" }}>
         <div className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-          <SectionLabel>O que entrego</SectionLabel>
+          <SectionLabel>O que entregamos</SectionLabel>
           <SectionTitle>
             Do <em className="italic" style={{ color: "var(--violet)" }}>desenho</em> à <em className="italic" style={{ color: "var(--coral)" }}>entrega</em>, sem furos no caminho.
           </SectionTitle>
@@ -267,7 +268,7 @@ function Index() {
       <section id="eventos" className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
         <SectionLabel>Palestras & participações</SectionLabel>
         <SectionTitle>
-          Compartilhando o que aprendo <em className="italic" style={{ color: "var(--coral)" }}>em alto e bom som</em>.
+          Conhecimento que move <em className="italic" style={{ color: "var(--coral)" }}>a conversa</em>.
         </SectionTitle>
         <ol className="mt-14 divide-y divide-border border-y border-border">
           {EVENTS.map((e) => (
@@ -290,7 +291,7 @@ function Index() {
             Tem um <em className="italic" style={{ color: "var(--violet)" }}>desafio</em> que vale a pena resolver?
           </h2>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto">
-            Conta pra mim. Da primeira conversa à entrega final, caminho com você.
+            Conta pra gente. Da primeira conversa à entrega final, caminhamos com você.
           </p>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto">
