@@ -154,7 +154,7 @@ function Index() {
       <section className="max-w-[1120px] mx-auto px-6 md:px-10 py-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden mt-12">
         {[
           ["11+", "Anos como Include Tech"],
-          ["20+", "Anos em tecnologia"],
+          ["20+", "Anos de expertise em tecnologia"],
           ["3", "Produtos de IA em desenvolvimento"],
           ["∞", "Possibilidades com IA generativa"],
         ].map(([n, l]) => (
