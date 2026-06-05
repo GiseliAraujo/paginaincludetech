@@ -96,7 +96,7 @@ function Index() {
             <li>
               <a href="#contato" className="text-sm font-medium px-4 py-2 rounded-full text-primary-foreground"
                  style={{ background: "var(--violet)" }}>
-                Fale comigo
+                Fale conosco
               </a>
             </li>
           </ul>
