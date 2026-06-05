@@ -59,8 +59,16 @@ const EVENTS = [
 
 function Logo({ className = "" }: { className?: string }) {
   return (
-    <span className={`font-serif-display text-[1.5rem] leading-none ${className}`}>
-      Include<span className="italic" style={{ color: "var(--violet)" }}>Tech</span>
+    <span className={`inline-flex items-center gap-2 ${className}`} aria-label="Include Tech">
+      <span className="font-sans font-extrabold leading-[0.95] text-[1rem]" style={{ color: "var(--violet)" }}>
+        Include<br />Tech
+      </span>
+      <span
+        className="inline-flex items-center justify-center rounded-[6px] font-sans font-extrabold text-[0.85rem] w-8 h-8"
+        style={{ background: "var(--violet)", color: "#ffffff" }}
+      >
+        IT
+      </span>
     </span>
   );
 }
