@@ -12,10 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // When deploying to Vercel, force the Nitro `vercel` preset so the build
-  // emits a Vercel-compatible output (.vercel/output). Locally and inside the
-  // Lovable sandbox we keep the default (cloudflare-module).
-  ...(process.env.VERCEL
-    ? { nitro: { preset: "vercel" } as const }
-    : {}),
+  // Force-enable Nitro on every build. On Vercel we use the `vercel` preset
+  // (emits the Build Output API at `.vercel/output/`). Elsewhere (Lovable
+  // sandbox / Cloudflare) we keep `cloudflare-module`.
+  nitro: {
+    preset: process.env.VERCEL ? "vercel" : "cloudflare-module",
+  },
 });
