@@ -268,7 +268,7 @@ function Index() {
       <section id="eventos" className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
         <SectionLabel>Palestras & participações</SectionLabel>
         <SectionTitle>
-          Compartilhando o que aprendo <em className="italic" style={{ color: "var(--coral)" }}>em alto e bom som</em>.
+          Conhecimento que move <em className="italic" style={{ color: "var(--coral)" }}>a conversa</em>.
         </SectionTitle>
         <ol className="mt-14 divide-y divide-border border-y border-border">
           {EVENTS.map((e) => (
