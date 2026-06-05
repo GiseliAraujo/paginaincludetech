@@ -50,8 +50,8 @@ const EXPERTISE = [
 ];
 
 const EVENTS = [
-  { year: "2025", name: "SENAI + Google · IA Generativa na Educação", role: "Líder técnica de projeto nacional", place: "Brasil" },
-  { year: "2024", name: "MIT · Programa Executivo em IA", role: "Participante / Speaker convidada", place: "Cambridge, EUA" },
+  { year: "2025", name: "SENAI + Google · IA Generativa na Educação", role: "Execução técnica nacional", place: "Brasil" },
+  { year: "2024", name: "MIT · Programa Executivo em IA", role: "Participação executiva", place: "Cambridge, EUA" },
   { year: "2024", name: "Insper · AI for Business", role: "Painel sobre Agentes de IA", place: "São Paulo" },
   { year: "2023", name: "Web Summit Rio", role: "Mesa de IA Generativa na Indústria", place: "Rio de Janeiro" },
   { year: "2023", name: "Meetup Mulheres em IA · DF", role: "Keynote — LLMs aplicadas", place: "Brasília" },
@@ -203,7 +203,7 @@ function Index() {
       {/* SERVIÇOS */}
       <section id="servicos" className="relative border-y border-border" style={{ background: "var(--mist)" }}>
         <div className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-          <SectionLabel>O que entrego</SectionLabel>
+          <SectionLabel>O que entregamos</SectionLabel>
           <SectionTitle>
             Do <em className="italic" style={{ color: "var(--violet)" }}>desenho</em> à <em className="italic" style={{ color: "var(--coral)" }}>entrega</em>, sem furos no caminho.
           </SectionTitle>
