@@ -167,29 +167,30 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="max-w-[1120px] mx-auto px-6 md:px-10 py-28">
-        <SectionLabel>Quem sou</SectionLabel>
+        <SectionLabel>Quem somos</SectionLabel>
         <SectionTitle>
           Tecnologia com <em className="italic" style={{ color: "var(--violet)" }}>propósito</em> e profundidade.
         </SectionTitle>
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 mt-14">
           <div className="space-y-5 text-muted-foreground leading-[1.85]">
             <p>A <strong className="text-foreground font-medium">Include Tech</strong> nasceu em 2015 como casa de desenvolvimento de software e evoluiu de forma consistente para dados, analytics e Inteligência Artificial — acompanhando cada onda da transformação digital.</p>
-            <p>Hoje lidero projetos de <strong className="text-foreground font-medium">IA generativa e orquestração de agentes</strong> para indústria e educação profissional, com atuação em convênios nacionais de grande impacto — como o projeto SENAI + Google.</p>
-            <p>Minha filosofia é simples: <strong className="text-foreground font-medium">transformar IA em soluções reais, acessíveis e aplicáveis</strong>, gerando valor mensurável para quem importa.</p>
+            <p>Hoje lideramos projetos de <strong className="text-foreground font-medium">IA generativa e orquestração de agentes</strong> para indústria e educação profissional, com atuação em convênios nacionais de grande impacto — como o projeto SENAI + Google.</p>
+            <p>Nossa filosofia é simples: <strong className="text-foreground font-medium">transformar IA em soluções reais, acessíveis e aplicáveis</strong>, gerando valor mensurável para quem importa.</p>
           </div>
           <div className="relative rounded-3xl border border-border bg-card p-8 overflow-hidden">
             <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full grad-a opacity-30 blur-2xl float-slow" />
             <div className="relative">
-              <div className="font-serif-display text-3xl">Giseli Araujo</div>
+              <div className="font-serif-display text-3xl">Include Tech</div>
               <div className="mt-1 font-mono-ui text-[11px] uppercase tracking-[0.18em]" style={{ color: "var(--violet)" }}>
-                Founder · Head of AI
+                IA · Dados · Produto
               </div>
               <p className="mt-5 text-sm text-muted-foreground leading-[1.8]">
-                Tech, Data & AI Lead com mais de 20 anos de experiência. Especialista em IA Generativa,
-                LLMs e Orquestração de Agentes. Conecto IA à indústria brasileira, educação profissional e saúde.
+                Estúdio especializado em IA Generativa, LLMs e Orquestração de Agentes.
+                Conectamos inteligência artificial à indústria brasileira, educação profissional e saúde
+                com soluções end-to-end, do desenho à entrega.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
-                {["IA Generativa","LLMs","Agentes de IA","Product Management","Data & Analytics","MIT · Insper"].map((t) => (
+                {["IA Generativa","LLMs","Agentes de IA","Product Management","Data & Analytics","Indústria · Saúde · Educação"].map((t) => (
                   <span key={t} className="text-xs px-3 py-1 rounded-full border border-border bg-background/60"
                         style={{ color: "var(--violet)" }}>{t}</span>
                 ))}
