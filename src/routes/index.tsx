@@ -86,7 +86,7 @@ function Index() {
               <LocalePicker value={locale} onChange={onPickLocale} label={tr.languagePicker} />
             </li>
             <li>
-              <a href="#contato" className="text-sm font-medium px-4 py-2 rounded-full text-primary-foreground"
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick} className="text-sm font-medium px-4 py-2 rounded-full text-primary-foreground"
                  style={{ background: "var(--violet)" }}>
                 {tr.nav.cta}
               </a>
@@ -124,7 +124,7 @@ function Index() {
                style={{ background: "var(--violet)" }}>
               {tr.hero.ctaPrimary}
             </a>
-            <a href="#contato" className="px-6 py-3 rounded-full font-medium text-sm border border-border bg-card/60 backdrop-blur hover:border-foreground/40 transition-colors">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick} className="px-6 py-3 rounded-full font-medium text-sm border border-border bg-card/60 backdrop-blur hover:border-foreground/40 transition-colors">
               {tr.hero.ctaSecondary}
             </a>
           </div>
@@ -235,7 +235,7 @@ function Index() {
               <div className="p-7">
                 <h3 className="font-serif-display text-3xl">{p.name}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-[1.75]">{p.desc}</p>
-                <a href="#contato" className="inline-flex items-center gap-1 mt-5 text-sm font-medium group-hover:gap-3 transition-all"
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick} className="inline-flex items-center gap-1 mt-5 text-sm font-medium group-hover:gap-3 transition-all"
                    style={{ color: "var(--violet)" }}>
                   {tr.products.cta} <span aria-hidden>→</span>
                 </a>
@@ -255,7 +255,7 @@ function Index() {
           </h2>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto">{tr.contact.lead}</p>
 
-          <a href="mailto:giselialmeida@outlook.com"
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}
              className="inline-block mt-10 px-8 py-4 rounded-full text-primary-foreground font-medium text-sm transition-transform hover:-translate-y-0.5"
              style={{ background: "var(--violet)" }}>
             {tr.contact.cta}
