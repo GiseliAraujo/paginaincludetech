@@ -113,7 +113,7 @@ const PT: Dict = {
   stats: [
     ["11+", "Anos como Include Tech"],
     ["20+", "Anos de expertise em tecnologia"],
-    ["3", "Produtos de IA em desenvolvimento"],
+    ["Diversos", "produtos de IA sendo desenvolvidos e entregues"],
     ["∞", "Possibilidades com IA generativa"],
   ],
   about: {
@@ -189,7 +189,7 @@ const EN: Dict = {
   stats: [
     ["11+", "Years as Include Tech"],
     ["20+", "Years of tech expertise"],
-    ["3", "AI products in development"],
+    ["Various", "AI products being developed and delivered"],
     ["∞", "Possibilities with generative AI"],
   ],
   about: {
@@ -265,7 +265,7 @@ const ES: Dict = {
   stats: [
     ["11+", "Años como Include Tech"],
     ["20+", "Años de experiencia en tecnología"],
-    ["3", "Productos de IA en desarrollo"],
+    ["Varios", "productos de IA siendo desarrollados y entregados"],
     ["∞", "Posibilidades con IA generativa"],
   ],
   about: {
@@ -341,7 +341,7 @@ const FR: Dict = {
   stats: [
     ["11+", "Années en tant qu'Include Tech"],
     ["20+", "Années d'expertise tech"],
-    ["3", "Produits d'IA en développement"],
+    ["Divers", "produits d'IA en cours de développement et de livraison"],
     ["∞", "Possibilités avec l'IA générative"],
   ],
   about: {
